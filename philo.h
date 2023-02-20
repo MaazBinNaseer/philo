@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-khni <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 16:05:14 by ael-khni          #+#    #+#             */
-/*   Updated: 2022/03/07 04:39:38 by ael-khni         ###   ########.fr       */
+/*   Updated: 2023/02/20 19:10:01 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,17 @@
 # include <stdlib.h>
 # include <sys/time.h>
 # include <unistd.h>
+
+
+#define PHILO "\U0001F9D0"
+#define EATING_EM "\U0001F372"
+#define THINK_EM "\U0001F914"
+#define SLEEPING_EM "\U0001F634"
+#define DIED "\U0001F480"
+
+#define RED "\033[0;31m"
+#define YELLOW ""
+#define GREEN "" 
 
 # define FT_SUCCESS 0
 # define FT_FAILURE 1

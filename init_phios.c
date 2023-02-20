@@ -9,7 +9,8 @@ void	*ft_check_death(void *arg)
 	{
 		if ((philo->last_meal + philo->info->time_to_die) < ft_get_time())
 		{
-			ft_print_msg(philo, "died");
+			// printf("I am dying\n");
+			ft_print_msg(philo, DIED RED "DEAD\33[0m");
 			philo->should_die = true;
 			philo->info->finish = true;
 		}

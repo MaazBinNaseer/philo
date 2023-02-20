@@ -29,6 +29,12 @@ void	ft_print_msg(t_philo *philo, char *msg)
 {
 	pthread_mutex_lock(&philo->info->finish_lock);
 	if (!philo->info->finish)
-		printf("%lli\t%i\t%s\n", ft_current_time(philo), philo->id + 1, msg);
+		{	printf("-------------------------------------------\n");
+			printf("|%lli|\t", ft_current_time(philo));
+			printf("|%i|\t" , philo->id);
+			printf(PHILO " Philo is --> ");
+			printf(" %s\n ", msg);
+			printf("-------------------------------------------\n");
+		}
 	pthread_mutex_unlock(&philo->info->finish_lock);
 }

@@ -8,7 +8,7 @@ void	down_fork(t_philo *philo, int f1, int f2)
 
 void	ft_eating(t_philo *philo)
 {
-	ft_print_msg(philo, "is eating");
+	ft_print_msg(philo, EATING_EM " eating ");
 	usleep(philo->info->time_to_eat * 1000);
 	philo->last_meal = ft_get_time();
 	philo->ate++;
@@ -19,14 +19,14 @@ void	ft_eating(t_philo *philo)
 void	grab_fork(t_philo *philo, int f)
 {
 	pthread_mutex_lock(&philo->info->forks[f]);
-	ft_print_msg(philo, "has taken a fork");
+	ft_print_msg(philo, RED "has taken a fork \33[0m ");
 }
 
 void	sleep_then_think(t_philo *philo)
 {
 	ft_print_msg(philo, "is sleeping");
 	usleep(philo->info->time_to_sleep * 1000);
-	ft_print_msg(philo, "is thinking");
+	ft_print_msg(philo, THINK_EM);
 }
 
 void	ft_join_free(t_info *info)
