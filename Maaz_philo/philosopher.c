@@ -1,5 +1,3 @@
-
-
 #include "philo.h"
 
 /* eat_sleep_routine:
