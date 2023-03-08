@@ -1,11 +1,11 @@
 NAME = philo
-CFILES = init_phios.c init.c main.c philo.c routine.c time.c utils.c 
+CFILES = exit.c simulation_check.c init.c main.c output.c parsing.c philosopher.c time.c
 OBJECTS = $(addprefix $(OBJDIR)/, $(CFILES:.c=.o))
 # Define the object directory
 OBJDIR = obj
 CFLAGS = gcc -Wall -Wextra -Werror -g -pthread
 $(NAME): $(OBJECTS)
-	@echo "\033[0;32m ------CREATING----- \033[0m" $(NAME)
+	@echo "\033[0;32m ------CREATING----- $(NAME) \033[0m"
 	$(CFLAGS) $(OBJECTS) -o $(NAME)
 all: $(NAME)
 $(OBJDIR)/%.o: %.c | $(OBJDIR)
